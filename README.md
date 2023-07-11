@@ -33,17 +33,15 @@ products to be allowed limited by country from manageable from admin on product 
 
 ### Type 2: Composer
 
-- Open your package.json and add this following code into `repositories`
-
-` "repositories": [{
-"type": "vcs",
-"url": "https://github.com/kamlesh-limesharp/ml-developer-practical-test"
-}
-]`
-- Install the module composer by running `composer update`
-- enable the module by running `php bin/magento module:enable ML_DeveloperTest`
-- apply database updates by running `php bin/magento setup:upgrade`\*
-- Flush the cache by running `php bin/magento cache:flush`
+ - Make the module available in a composer repository for example:
+    - private repository `repo.magento.com`
+    - public repository `packagist.org`
+    - public github repository as vcs
+ - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
+ - Install the module composer by running `composer require ml/module-developertest`
+ - enable the module by running `php bin/magento module:enable ML_DeveloperTest`
+ - apply database updates by running `php bin/magento setup:upgrade`\*
+ - Flush the cache by running `php bin/magento cache:flush`
 
 
 ## Configuration
