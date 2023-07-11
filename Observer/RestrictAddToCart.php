@@ -99,6 +99,6 @@ class RestrictAddToCart implements ObserverInterface
      */
     private function getRestrictedCountriesFromProduct($product): array|string
     {
-        return ($product['restrict_countries']) ? array_values(explode(',', $product['restrict_countries'])) : '';
+        return ($product['restrict_countries']) ? array_values(explode(',', $product['restrict_countries'])) : [];
     }
 }
